@@ -1,0 +1,2067 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      @media (max-width: 991.98px) {
+        .banner_container,
+        .recommended-container {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+        }
+
+        .banner,
+        .banner_buttom,
+        .recommended-section,
+        .footer {
+          overflow: hidden;
+        }
+
+        .banner .row,
+        .banner_buttom .row {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+        .banner h1 {
+          font-size: clamp(1.9rem, 6vw, 2.75rem);
+          line-height: 1.2;
+          word-break: break-word;
+        }
+
+        .banner p {
+          font-size: 1rem;
+          line-height: 1.6;
+          word-break: break-word;
+        }
+
+        .banner img {
+          display: block;
+          max-width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        .search-wrap {
+          width: 100%;
+        }
+
+        .recommended-arrow {
+          display: none;
+        }
+
+        .nav_submain .dropdown-menu {
+          position: static !important;
+          transform: none !important;
+          width: 100%;
+          margin-top: 0.5rem;
+        }
+
+        .nav_submain .submenu-menu {
+          margin-left: 0 !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 geeks-navbar">
+        <div class="container-fluid ps-3 pe-1">
+          <a class="navbar-brand py-0 me-0" href="#">
+            <img
+              src="home_images/logo.e22c846d87ff5a1252df471397badc6d.svg"
+              alt="Logo"
+              class="nav-logo"
+            />
+          </a>
+          <div
+            class="d-flex icons-mobile align-items-center ms-auto gap-2 ms-0 ms-lg-5 mt-3 mt-lg-0 flex-wrap"
+          >
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn nav-circle-btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-circle-half"></i>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+              >
+                <li>
+                  <a
+                    class="dropdown-item menu-item d-flex align-items-center gap-2"
+                    href="#"
+                    ><i class="bi bi-sun"></i><span>Light</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item menu-item d-flex align-items-center gap-2"
+                    href="#"
+                    ><i class="bi bi-moon-stars"></i><span>Dark</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item menu-item d-flex align-items-center gap-2"
+                    href="#"
+                    ><i class="bi bi-circle-half"></i><span>Auto</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button
+                type="button"
+                class="btn nav-circle-btn"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-bell"></i>
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+              >
+                <li class="dropdown-header fw-semibold px-3 py-2">
+                  Notifications
+                </li>
+                <li>
+                  <hr class="dropdown-divider my-0" />
+                </li>
+                <li>
+                  <a class="dropdown-item menu-item" href="#"
+                    >New order received</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item menu-item" href="#">Course updated</a>
+                </li>
+                <li>
+                  <a class="dropdown-item menu-item" href="#">New message</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="dropdown">
+              <button
+                class="btn p-0 border-0 bg-transparent"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                  alt="User avatar"
+                  class="rounded-circle nav-avatar"
+                />
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+              >
+                <li class="px-3 py-2">
+                  <h6 class="mb-0">Muhammad Haseeb</h6>
+                  <small class="text-muted">Software Engineer Intern</small>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item menu-item" href="#">Profile</a>
+                </li>
+                <li>
+                  <a class="dropdown-item menu-item" href="#">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item menu-item text-danger" href="#"
+                    >Sign Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#geeksNavbar"
+            aria-controls="geeksNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="nav_submain collapse navbar-collapse align-items-start"
+            id="geeksNavbar"
+          >
+            <ul class="navbar-nav align-items-lg-center mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Browse
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu browse-menu"
+                >
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Web Development</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">HTML</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">CSS</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Bootstrap</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >JavaScript</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Design</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >UI Design</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >UX Design</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Figma</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Mobile App</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">IT Software</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Marketing</a>
+                  </li>
+                  <li><a class="dropdown-item menu-item" href="#">Music</a></li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Life Style</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Business</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Photography</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Landings
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu landings-menu"
+                >
+                  <li>
+                    <h6 class="dropdown-header menu-heading">LANDINGS</h6>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center active-item"
+                      href="#"
+                    >
+                      <span>Home Abroad</span>
+                      <span class="badge text-bg-primary rounded-1 ms-2"
+                        >New</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center"
+                      href="#"
+                    >
+                      <span>Home Learning Platform</span>
+                      <span class="badge text-bg-primary rounded-1 ms-2"
+                        >New</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home Mentor</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Home Education</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home Academy</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home Courses</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home SaaS</a>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Lead Course</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Request Access</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Job Listing</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu pages-menu"
+                >
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Courses</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Courses</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Course Single</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Course Category</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Paths</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Browse Path</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Path Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Blog</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Blog Listing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Article</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Career</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Career List</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Career Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Portfolio</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Portfolio</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Portfolio Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Mentor</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Mentor List</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Mentor Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Job</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Job List</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Job Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Specialty</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Coming Soon</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >404 Error</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Maintenance</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+
+                  <li><a class="dropdown-item menu-item" href="#">About</a></li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Help Center</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Help Center</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">FAQ</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Pricing</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Compare Plan</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Contact</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Accounts
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu accounts-menu"
+                >
+                  <li>
+                    <h6 class="dropdown-header menu-heading">ACCOUNTS</h6>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Instructor</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Courses</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Quiz</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Students</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Student Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >My Courses</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Wishlist</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Admin</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Overview</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Users</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Settings</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Sign In</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Sign Up</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Forgot Password</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Edit Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Security</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Social Profiles</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Notifications</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Privacy Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Delete Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Linked Accounts</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="dot_dropdown nav-link dropdown-toggle top-link fs-3 fw-bold"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ...
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 more-menu p-3"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="more-item d-flex align-items-start text-decoration-none"
+                    >
+                      <span class="more-icon me-3"
+                        ><i class="bi bi-file-earmark-text"></i
+                      ></span>
+                      <span>
+                        <span class="d-block more-title">Documentation</span>
+                        <span class="d-block more-desc"
+                          >Browse the all documentation</span
+                        >
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="mt-3">
+                    <a
+                      href="#"
+                      class="more-item d-flex align-items-start text-decoration-none"
+                    >
+                      <span class="more-icon me-3"
+                        ><i class="bi bi-stickies"></i
+                      ></span>
+                      <span class="w-100">
+                        <span class="d-flex align-items-center gap-2">
+                          <span class="more-title">Snippets</span>
+                          <span class="badge text-bg-primary rounded-1"
+                            >New</span
+                          >
+                        </span>
+                        <span class="d-block more-desc">Bunch of Snippet</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="mt-3">
+                    <a
+                      href="#"
+                      class="more-item d-flex align-items-start text-decoration-none"
+                    >
+                      <span class="more-icon me-3"
+                        ><i class="bi bi-stack"></i
+                      ></span>
+                      <span>
+                        <span class="d-flex align-items-center gap-2">
+                          <span class="more-title">Changelog</span>
+                          <span class="version-text">v3.1.0</span>
+                        </span>
+                        <span class="d-block more-desc">See what's new</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div
+              class="ms-lg-3 me-auto mt-3 mt-lg-0 search-wrap border"
+              style="border: none !important; outline: none !important"
+            >
+              <form role="search">
+                <div class="position-relative">
+                  <i class="bi bi-search fs-6 search-icon"></i>
+                  <input
+                    class="form-control search-input shadow-none"
+                    type="search"
+                    placeholder="Search Courses"
+                    aria-label="Search"
+                  />
+                </div>
+              </form>
+            </div>
+
+            <div
+              class="d-flex icons-desktop align-items-center gap-2 ms-0 ms-lg-5 mt-3 mt-lg-0 flex-wrap"
+            >
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn nav-circle-btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-circle-half"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex align-items-center gap-2"
+                      href="#"
+                      ><i class="bi bi-sun"></i><span>Light</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex align-items-center gap-2"
+                      href="#"
+                      ><i class="bi bi-moon-stars"></i><span>Dark</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex align-items-center gap-2"
+                      href="#"
+                      ><i class="bi bi-circle-half"></i><span>Auto</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn nav-circle-btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-bell"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+                >
+                  <li class="dropdown-header fw-semibold px-3 py-2">
+                    Notifications
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider my-0" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >New order received</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Course updated</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">New message</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="btn p-0 border-0 bg-transparent"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                    alt="User avatar"
+                    class="rounded-circle nav-avatar"
+                  />
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+                >
+                  <li class="px-3 py-2">
+                    <h6 class="mb-0">Muhammad Haseeb</h6>
+                    <small class="text-muted">Software Engineer Intern</small>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item text-danger" href="#"
+                      >Sign Out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid banner p-0 m-0">
+      <div class="container banner_container">
+        <div class="align-items-center g-0 row">
+          <div class="col-12 col-lg-6 col-xl-5 py-5 py-lg-0 text-start">
+            <h1 class="text-white display-4 fw-bold">
+              Welcome to Geeks UI Learning Application
+            </h1>
+            <p class="text-white-50 mb-4 lead">
+              Hand-picked Instructor and expertly crafted courses, designed for
+              the modern students and entrepreneur.
+            </p>
+            <div
+              class="d-flex flex-sm-row justify-content-start justify-content-lg-start gap-1"
+            >
+              <button type="button" class="btn btn-dark">Browse Courses</button>
+              <button type="button" class="btn btn-light">
+                Are You Instructor?
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="text-center text-lg-end col-12 col-lg-6 col-xl-7 mt-4 mt-lg-0"
+          >
+            <img
+              src="./home_images/hero-img.c1489dfacfd7fadae59a.png"
+              alt="not found"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fuild banner_buttom">
+      <section class="bg-white py-4 shadow-sm">
+        <div class="container banner_container">
+          <div class="row align-items-center g-4 mx-0">
+            <div class="col-12 col-lg-4 ps-0">
+              <div class="d-flex align-items-center">
+                <span
+                  class="bg-light-warning rounded-circle text-center p-3 font-weight-semibold"
+                >
+                  <i class="bi bi-camera-video rounded-circle"></i>
+                </span>
+                <div class="ms-3">
+                  <h4 class="mb-0 fw-semi-bold">30,000 online courses</h4>
+                  <p class="mb-0 fw-light">Enjoy a variety of fresh topics</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4 px-0">
+              <div class="d-flex align-items-center">
+                <span class="bg-light-warning rounded-circle p-3">
+                  <i class="bi bi-people"></i>
+                </span>
+                <div class="ms-3">
+                  <h4 class="mb-0 fw-semi-bold">Expert instruction</h4>
+                  <p class="mb-0 fw-light">Find the right instructor for you</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4 px-0">
+              <div class="d-flex align-items-center">
+                <span class="bg-light-warning rounded-circle p-3">
+                  <i class="bi bi-clock"></i>
+                </span>
+                <div class="ms-3">
+                  <h4 class="mb-0 fw-semi-bold">Lifetime access</h4>
+                  <p class="mb-0 fw-light">Learn on your schedule</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="recommended-section">
+      <div class="container recommended-container banner_container">
+        <div class="row">
+          <div class="col-12">
+            <h2
+              class="recommended-title mx-2 mb-4"
+              style="letter-spacing: -0.352px"
+            ></h2>
+          </div>
+        </div>
+
+        <div class="recommended-slider-area">
+          <!-- visible only, no functionality -->
+          <button
+            type="button"
+            class="recommended-arrow recommended-arrow-prev"
+            aria-label="Previous"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <button
+            type="button"
+            class="recommended-arrow recommended-arrow-next"
+            aria-label="Next"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
+          <div class="row justify-content-center recommended-cards-row">
+            <!-- card 1 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 justify-content-center d-flex"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  class="card-img-top card_index_img"
+                  alt="GraphQL"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >GraphQL: introduction to graphQL for beginners</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 40m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">2.5</span>
+                    <span class="fw-light text-muted">(1,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$500</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$600</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Brooklyn Simmons"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Brooklyn Simmons</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  class="card-img-top card_index_img"
+                  alt="JavaScript"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href="">A Complete Beginner’s Guide to JavaScript</a>
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">4h 10m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">3.5</span>
+                    <span class="fw-light text-muted">(7,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$700</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$850</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Jenny Wilson"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Jenny Wilson</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Node js"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Beginning Node.js, Express &amp; MongoDB Development</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.0</span>
+                    <span class="fw-light text-muted">(15,700)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$800</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$950</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
+                        alt="Sina Ray"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sina Ray</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Laravel"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Laravel: The Ultimate Beginner’s Guide to Learn</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">1h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Beginner</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.5</span>
+                    <span class="fw-light text-muted">(2,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$170</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$220</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        alt="Sobo Rikhan"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sobo Rikhan</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recommended-section">
+      <div class="container recommended-container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="recommended-title">Most Popular</h2>
+          </div>
+        </div>
+
+        <div class="recommended-slider-area">
+          <div class="row justify-content-center recommended-cards-row">
+            <!-- card 1 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  class="card-img-top card_index_img"
+                  alt="GraphQL"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >GraphQL: introduction to graphQL for beginners</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 40m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">2.5</span>
+                    <span class="fw-light text-muted">(1,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$500</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$600</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Brooklyn Simmons"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Brooklyn Simmons</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  class="card-img-top card_index_img"
+                  alt="JavaScript"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href="">A Complete Beginner’s Guide to JavaScript</a>
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">4h 10m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">3.5</span>
+                    <span class="fw-light text-muted">(7,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$700</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$850</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Jenny Wilson"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Jenny Wilson</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Node js"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Beginning Node.js, Express &amp; MongoDB Development</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.0</span>
+                    <span class="fw-light text-muted">(15,700)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$800</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$950</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
+                        alt="Sina Ray"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sina Ray</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Laravel"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Laravel: The Ultimate Beginner’s Guide to Learn</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">1h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Beginner</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.5</span>
+                    <span class="fw-light text-muted">(2,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$170</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$220</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        alt="Sobo Rikhan"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sobo Rikhan</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommended-section pb-5 mb-5">
+      <div class="container recommended-container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="recommended-title">Trending</h2>
+          </div>
+        </div>
+
+        <div class="recommended-slider-area">
+          <div class="row justify-content-center recommended-cards-row">
+            <!-- card 1 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  class="card-img-top card_index_img"
+                  alt="GraphQL"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >GraphQL: introduction to graphQL for beginners</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 40m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">2.5</span>
+                    <span class="fw-light text-muted">(1,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$500</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$600</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Brooklyn Simmons"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Brooklyn Simmons</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  class="card-img-top card_index_img"
+                  alt="JavaScript"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href="">A Complete Beginner’s Guide to JavaScript</a>
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">4h 10m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">3.5</span>
+                    <span class="fw-light text-muted">(7,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$700</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$850</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Jenny Wilson"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Jenny Wilson</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Node js"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Beginning Node.js, Express &amp; MongoDB Development</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.0</span>
+                    <span class="fw-light text-muted">(15,700)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$800</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$950</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
+                        alt="Sina Ray"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sina Ray</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Laravel"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Laravel: The Ultimate Beginner’s Guide to Learn</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">1h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Beginner</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.5</span>
+                    <span class="fw-light text-muted">(2,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$170</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$220</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        alt="Sobo Rikhan"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sobo Rikhan</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="container banner_container ps-0">
+          <footer
+            class="d-flex flex-column flex-lg-row justify-content-between align-items-center row text-center text-lg-start g-3 g-lg-0"
+            style="padding-bottom: 11px !important"
+          >
+            <p
+              class="col-12 col-lg-6 mb-0 text-body-secondary px-0"
+              style="line-height: 22.4px; font-size: 14px"
+            >
+              © 2024 Geeks. All Rights Reserved
+            </p>
+            <ul
+              class="nav col-12 col-lg-6 justify-content-center justify-content-lg-end pe-lg-4 flex-wrap"
+            >
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary pe-3 m-0 p-0"
+                  style="font-size: 14px; line-height: 24px; font-weight: 400"
+                  >Privacy</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary px-3 m-0 p-0"
+                  style="font-size: 14px; line-height: 24px"
+                  >Terms</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary p-0 px-3 m-0"
+                  style="font-size: 14px; line-height: 24px"
+                  >Feedback</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary ps-3 p-0 m-0"
+                  style="
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin-right: 11px !important;
+                  "
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,2567 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      @media (max-width: 991.98px) {
+        .banner_container {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          padding-left: 0.75rem !important;
+          padding-right: 0.75rem !important;
+        }
+
+        .banner_content {
+          padding-top: 3rem !important;
+          padding-bottom: 3rem !important;
+        }
+
+        .banner_content .row,
+        .main {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+        .banner_content .row > div {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .banner_content .col-lg-8 {
+          width: 100% !important;
+          max-width: 100% !important;
+          flex: 0 0 100% !important;
+          text-align: center !important;
+          align-items: center !important;
+        }
+
+        .banner_content .content_heading {
+          display: block;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          font-size: clamp(1.85rem, 5.8vw, 2.75rem) !important;
+          line-height: 1.2 !important;
+          white-space: normal !important;
+          overflow-wrap: anywhere;
+          word-break: break-word;
+        }
+
+        .banner_content .lead {
+          display: block;
+          width: 100% !important;
+          max-width: 42rem !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          padding-left: 0.25rem;
+          padding-right: 0.25rem;
+          font-size: 1rem !important;
+          line-height: 1.65 !important;
+          white-space: normal !important;
+          overflow-wrap: anywhere;
+        }
+
+        .banner_content .lead br {
+          display: none !important;
+        }
+
+        .banner_content .container-fluid.d-flex {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          justify-content: center !important;
+          align-items: center !important;
+          flex-wrap: wrap !important;
+          gap: 0.5rem 0.75rem !important;
+        }
+
+        .banner_content .container-fluid.d-flex > * {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+        .main {
+          display: flex;
+          flex-direction: column;
+          align-items: center !important;
+        }
+
+        .content_left_side,
+        .content_right_side {
+          width: 100% !important;
+          max-width: 100% !important;
+          flex: 0 0 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        .content_left_side {
+          order: 1;
+          margin-bottom: 1.25rem !important;
+        }
+
+        .content_right_side {
+          order: 2;
+          justify-content: center !important;
+          align-items: center !important;
+        }
+
+        .content_left_side .course-detail,
+        .content_right_side .card-video,
+        .content_right_side .course-info,
+        .content_right_side .instructor-detail,
+        .content_right_side > .card,
+        .content_right_side > .card-text {
+          width: 100% !important;
+          max-width: 100% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        .content_left_side .nav-tabs {
+          flex-wrap: nowrap !important;
+          overflow-x: auto !important;
+          overflow-y: hidden !important;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .content_left_side .nav-tabs .nav-item {
+          flex: 0 0 auto !important;
+        }
+
+        .content_left_side .nav-tabs .nav-link {
+          white-space: nowrap !important;
+          margin-left: 0.5rem !important;
+          margin-right: 0.5rem !important;
+          padding-left: 0.75rem !important;
+          padding-right: 0.75rem !important;
+        }
+
+        .content_left_side .course_item,
+        .content_left_side .tab-pane .d-flex.justify-content-between {
+          flex-wrap: wrap !important;
+          gap: 0.5rem !important;
+        }
+
+        .content_right_side .btn {
+          width: 100% !important;
+        }
+
+        .footer footer {
+          justify-content: center !important;
+          text-align: center !important;
+          row-gap: 0.75rem !important;
+        }
+
+        .footer footer p,
+        .footer footer ul {
+          justify-content: center !important;
+          margin-bottom: 0 !important;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .banner_content .content_heading {
+          font-size: clamp(1.7rem, 7vw, 2.25rem) !important;
+        }
+
+        .banner_content .lead {
+          font-size: 0.95rem !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 geeks-navbar">
+        <div class="container-fluid ps-3 pe-1">
+          <a class="navbar-brand py-0 me-0" href="#">
+            <img
+              src="home_images/logo.e22c846d87ff5a1252df471397badc6d.svg"
+              alt="Logo"
+              class="nav-logo"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#geeksNavbar"
+            aria-controls="geeksNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="nav_submain collapse navbar-collapse align-items-start"
+            id="geeksNavbar"
+          >
+            <ul class="navbar-nav align-items-lg-center mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Browse
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu browse-menu"
+                >
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Web Development</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">HTML</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">CSS</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Bootstrap</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >JavaScript</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Design</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >UI Design</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >UX Design</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Figma</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Mobile App</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">IT Software</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Marketing</a>
+                  </li>
+                  <li><a class="dropdown-item menu-item" href="#">Music</a></li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Life Style</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Business</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Photography</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Landings
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu landings-menu"
+                >
+                  <li>
+                    <h6 class="dropdown-header menu-heading">LANDINGS</h6>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center active-item"
+                      href="#"
+                    >
+                      <span>Home Abroad</span>
+                      <span class="badge text-bg-primary rounded-1 ms-2"
+                        >New</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center"
+                      href="#"
+                    >
+                      <span>Home Learning Platform</span>
+                      <span class="badge text-bg-primary rounded-1 ms-2"
+                        >New</span
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home Mentor</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Home Education</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home Academy</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home Courses</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Home SaaS</a>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Lead Course</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Request Access</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Job Listing</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu pages-menu"
+                >
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Courses</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Courses</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Course Single</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Course Category</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Paths</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Browse Path</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Path Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Blog</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Blog Listing</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Article</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Career</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Career List</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Career Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Portfolio</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Portfolio</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Portfolio Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Mentor</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Mentor List</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Mentor Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Job</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Job List</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Job Single</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Specialty</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Coming Soon</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >404 Error</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Maintenance</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+
+                  <li><a class="dropdown-item menu-item" href="#">About</a></li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Help Center</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Help Center</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">FAQ</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Pricing</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Compare Plan</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Contact</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle top-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Accounts
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 main-menu accounts-menu"
+                >
+                  <li>
+                    <h6 class="dropdown-header menu-heading">ACCOUNTS</h6>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Instructor</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Courses</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Quiz</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Students</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >Student Dashboard</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#"
+                          >My Courses</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Wishlist</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown-submenu position-relative">
+                    <a
+                      class="dropdown-item menu-item d-flex justify-content-between align-items-center submenu-link"
+                      href="#"
+                    >
+                      <span>Admin</span>
+                      <i class="bi bi-chevron-right small text-secondary"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu border-0 shadow-sm rounded-3 submenu-menu"
+                    >
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Overview</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Users</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item menu-item" href="#">Settings</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider my-2" />
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Sign In</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Sign Up</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Forgot Password</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Edit Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Security</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Social Profiles</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Notifications</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Privacy Settings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Delete Profile</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Linked Accounts</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="dot_dropdown nav-link dropdown-toggle top-link fs-3 fw-bold"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  ...
+                </a>
+                <ul
+                  class="dropdown-menu border-0 shadow-sm rounded-3 more-menu p-3"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="more-item d-flex align-items-start text-decoration-none"
+                    >
+                      <span class="more-icon me-3"
+                        ><i class="bi bi-file-earmark-text"></i
+                      ></span>
+                      <span>
+                        <span class="d-block more-title">Documentation</span>
+                        <span class="d-block more-desc"
+                          >Browse the all documentation</span
+                        >
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="mt-3">
+                    <a
+                      href="#"
+                      class="more-item d-flex align-items-start text-decoration-none"
+                    >
+                      <span class="more-icon me-3"
+                        ><i class="bi bi-stickies"></i
+                      ></span>
+                      <span class="w-100">
+                        <span class="d-flex align-items-center gap-2">
+                          <span class="more-title">Snippets</span>
+                          <span class="badge text-bg-primary rounded-1"
+                            >New</span
+                          >
+                        </span>
+                        <span class="d-block more-desc">Bunch of Snippet</span>
+                      </span>
+                    </a>
+                  </li>
+
+                  <li class="mt-3">
+                    <a
+                      href="#"
+                      class="more-item d-flex align-items-start text-decoration-none"
+                    >
+                      <span class="more-icon me-3"
+                        ><i class="bi bi-stack"></i
+                      ></span>
+                      <span>
+                        <span class="d-flex align-items-center gap-2">
+                          <span class="more-title">Changelog</span>
+                          <span class="version-text">v3.1.0</span>
+                        </span>
+                        <span class="d-block more-desc">See what's new</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="ms-lg-3 me-auto mt-3 mt-lg-0 search-wrap border">
+              <form role="search">
+                <div class="position-relative">
+                  <i class="bi bi-search fs-6 search-icon"></i>
+                  <input
+                    class="form-control search-input shadow-none"
+                    type="search"
+                    placeholder="Search Courses"
+                    aria-label="Search"
+                  />
+                </div>
+              </form>
+            </div>
+
+            <div class="d-flex align-items-center gap-2 ms-5 mt-3 mt-lg-0">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn nav-circle-btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-circle-half"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex align-items-center gap-2"
+                      href="#"
+                      ><i class="bi bi-sun"></i><span>Light</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex align-items-center gap-2"
+                      href="#"
+                      ><i class="bi bi-moon-stars"></i><span>Dark</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item menu-item d-flex align-items-center gap-2"
+                      href="#"
+                      ><i class="bi bi-circle-half"></i><span>Auto</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn nav-circle-btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-bell"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+                >
+                  <li class="dropdown-header fw-semibold px-3 py-2">
+                    Notifications
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider my-0" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >New order received</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#"
+                      >Course updated</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">New message</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button
+                  class="btn p-0 border-0 bg-transparent"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                    alt="User avatar"
+                    class="rounded-circle nav-avatar"
+                  />
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3 main-menu"
+                >
+                  <li class="px-3 py-2">
+                    <h6 class="mb-0">Muhammad Haseeb</h6>
+                    <small class="text-muted">Software Engineer Intern</small>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item" href="#">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item menu-item text-danger" href="#"
+                      >Sign Out</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="container-fluid banner banner_content pt-lg-8 pb-lg-16 pt-8 pb-12 ps-0 pe-0 bg-primary"
+    >
+      <div class="container banner_container">
+        <div class="row">
+          <div
+            class="col-lg-8 d-flex flex-column justify-content-center align-items-start"
+          >
+            <h2 class="mb-2 content_heading text-white display-4 fw-semi-bold">
+              Getting Started with JavaScript
+            </h2>
+            <p class="text-white mb-4 pb-3 lead">
+              JavaScript is the popular programming language which powers web
+              <br />
+              pages and web applications. This course will get you started
+              coding in <br />JavaScript.
+            </p>
+            <div
+              class="px-0 container-fluid d-flex justify-content-start align-items-start"
+            >
+              <i
+                class="bi fw-light text-white-50 content_banner_footer text-light bi-bookmark me-2"
+              ></i>
+              <span class="fw-light content_banner_footer text-light"
+                >bookmark</span
+              >
+              <i
+                class="bi bi-person content_banner_footer text-white-50 fw-light text-light ms-3"
+              ></i>
+              <span class="fw-light content_banner_footer text-light ms-1"
+                >1200 Enrolled
+              </span>
+              <div class="ms-4 text-center">
+                <span class="rating card_stars">★★★★☆</span>
+                <span
+                  class="fw-light content_banner_footer text-light me-4 ms-1"
+                  >(140)</span
+                >
+              </div>
+              <i
+                class="bi bi-bar-chart text-white-50 content_banner_footer fw-light text-light"
+              ></i>
+              <span class="fw-light text-light content_banner_footer me-4 ms-1"
+                >intermediate</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container banner_container">
+      <div class="row main">
+        <div class="col-12 col-lg-8 content_left_side">
+          <div
+            class="container bg-white rounded-3 course-detail m-0"
+            style="width: 46rem; padding: 1px"
+          >
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active mx-4"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="home-tab-pane"
+                  aria-selected="true"
+                >
+                  Contents
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link mx-4"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile-tab-pane"
+                  aria-selected="false"
+                >
+                  Description
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link mx-4"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact-tab-pane"
+                  aria-selected="false"
+                >
+                  Reviews
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link mx-4"
+                  id="Transcript"
+                  data-bs-toggle="tab"
+                  data-bs-target="#Transcript-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="Transcript-pane"
+                  aria-selected="false"
+                >
+                  Transcript
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link mx-4"
+                  id="FAQS"
+                  data-bs-toggle="tab"
+                  data-bs-target="#FAQS-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="FAQS-pane"
+                  aria-selected="false"
+                >
+                  FAQ
+                </button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home-tab-pane"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                <div class="accordion p-4 pt-3" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Introduction to JavaScript
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show px-0 py-2 my-1"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div
+                          class="d-flex justify-content-between course_item py-2"
+                        >
+                          <div>
+                            <i
+                              class="fs-5 bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between course_item py-2"
+                        >
+                          <div>
+                            <i
+                              class="fs-5 bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div
+                          class="d-flex justify-content-between course_item py-2"
+                        >
+                          <div>
+                            <i
+                              class="fs-5 bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        JavaScript Beginning
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Variables and Constants
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree1">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree1"
+                        aria-expanded="false"
+                        aria-controls="collapseThree1"
+                      >
+                        Program Flow
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree1"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree1"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree2">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree2"
+                        aria-expanded="false"
+                        aria-controls="collapseThree2"
+                      >
+                        Functions
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree2"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree2"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree3">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree3"
+                        aria-expanded="false"
+                        aria-controls="collapseThree3"
+                      >
+                        Objects and the DOM
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree3"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree3"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree4">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree4"
+                        aria-expanded="false"
+                        aria-controls="collapseThree4"
+                      >
+                        Arrays
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree4"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree4"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree5">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree5"
+                        aria-expanded="false"
+                        aria-controls="collapseThree5"
+                      >
+                        Arrays
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree5"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree5"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree6">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree6"
+                        aria-expanded="false"
+                        aria-controls="collapseThree6"
+                      >
+                        Scope and Hoisting
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree6"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree6"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree7">
+                      <button
+                        class="accordion-button collapsed px-0 py-2 my-1"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree7"
+                        aria-expanded="false"
+                        aria-controls="collapseThree7"
+                      >
+                        Summary
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree7"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree7"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Variables and Constants</span>
+                          </div>
+                          <span class="">11min 17s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Install Develop Software</span>
+                          </div>
+                          <span class="">7min 12s</span>
+                        </div>
+                        <div class="d-flex justify-content-between course_item">
+                          <div>
+                            <i
+                              class="bi bi-play-circle mb-2 bg-light text-dark"
+                            ></i>
+                            <span class="">Git and Dithub Installations</span>
+                          </div>
+                          <span class="">15min 17s</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade fs-0"
+                id="profile-tab-pane"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+                tabindex="0"
+              >
+                <div class="container my-3">
+                  <h5 class="fw-semibold mb-3">Course Descriptions</h5>
+
+                  <p class="text-muted">
+                    If you're learning to program for the first time, or if
+                    you're coming from a different language, this course will
+                    give you the basics for coding in JavaScript.
+                  </p>
+
+                  <p class="text-muted">
+                    Next, you’ll explore the basics of the language, giving
+                    plenty of examples. Lastly, you’ll put your knowledge to
+                    work on a modern web page.
+                  </p>
+
+                  <h5 class="fw-semibold mt-4 mb-3">What you’ll learn</h5>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                          <i class="bi bi-check-circle text-success me-2"></i>
+                          <span
+                            >Recognize the importance of understanding your
+                            objectives</span
+                          >
+                        </li>
+
+                        <li class="d-flex align-items-start mb-3">
+                          <i class="bi bi-check-circle text-success me-2"></i>
+                          <span
+                            >Identify the fundamentals of composing a successful
+                            close</span
+                          >
+                        </li>
+
+                        <li class="d-flex align-items-start mb-3">
+                          <i class="bi bi-check-circle text-success me-2"></i>
+                          <span>Explore how to connect with your audience</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="col-md-6">
+                      <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                          <i class="bi bi-check-circle text-success me-2"></i>
+                          <span
+                            >Examine ways to connect with your audience</span
+                          >
+                        </li>
+
+                        <li class="d-flex align-items-start mb-3">
+                          <i class="bi bi-check-circle text-success me-2"></i>
+                          <span
+                            >Break down the best ways to exude executive
+                            presence</span
+                          >
+                        </li>
+
+                        <li class="d-flex align-items-start mb-3">
+                          <i class="bi bi-check-circle text-success me-2"></i>
+                          <span>Explore how to communicate the unknown</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <p class="text-muted mt-4">
+                    Maecenas viverra condimentum nulla molestie condimentum.
+                    Nunc ex libero, feugiat quis lectus vel, ornare euismod
+                    ligula. Aenean sit amet arcu nulla.
+                  </p>
+
+                  <p class="text-muted">
+                    Duis facilisis ex a urna blandit ultricies. Nullam sagittis
+                    ligula non eros semper, nec mattis odio ullamcorper.
+                    Phasellus feugiat sit amet leo eget consectetur.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="contact-tab-pane"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                tabindex="0"
+              >
+                <div class="reviews-section bg-white border rounded-3 p-4">
+                  <h6 class="fw-semibold mb-4">
+                    How students rated this courses
+                  </h6>
+
+                  <div class="row g-4 align-items-start mb-4">
+                    <div class="col-md-3">
+                      <h1 class="fw-bold mb-1" style="font-size: 3rem">4.12</h1>
+                      <div class="text-warning small mb-1">★★★★★</div>
+                      <small class="text-muted">(Based on 50 reviews)</small>
+                    </div>
+
+                    <div class="col-md-9">
+                      <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="progress flex-grow-1 review-progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 48%"
+                          ></div>
+                        </div>
+                        <div class="text-warning small text-nowrap">★★★★★</div>
+                        <small class="text-muted">48%</small>
+                      </div>
+
+                      <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="progress flex-grow-1 review-progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 32%"
+                          ></div>
+                        </div>
+                        <div class="text-warning small text-nowrap">★★★★☆</div>
+                        <small class="text-muted">32%</small>
+                      </div>
+
+                      <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="progress flex-grow-1 review-progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 10%"
+                          ></div>
+                        </div>
+                        <div class="text-warning small text-nowrap">★★★☆☆</div>
+                        <small class="text-muted">10%</small>
+                      </div>
+
+                      <div class="d-flex align-items-center gap-2 mb-2">
+                        <div class="progress flex-grow-1 review-progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 4%"
+                          ></div>
+                        </div>
+                        <div class="text-warning small text-nowrap">★★☆☆☆</div>
+                        <small class="text-muted">4%</small>
+                      </div>
+
+                      <div class="d-flex align-items-center gap-2">
+                        <div class="progress flex-grow-1 review-progress">
+                          <div
+                            class="progress-bar bg-warning"
+                            style="width: 6%"
+                          ></div>
+                        </div>
+                        <div class="text-warning small text-nowrap">★☆☆☆☆</div>
+                        <small class="text-muted">6%</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <div
+                    class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4"
+                  >
+                    <h6 class="fw-semibold mb-0">Reviews</h6>
+
+                    <div class="position-relative review-search-box">
+                      <i
+                        class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted small"
+                      ></i>
+                      <input
+                        type="text"
+                        class="form-control form-control-sm ps-5"
+                        placeholder="Search Review"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Review 1 -->
+                  <div class="pb-4 mb-4 border-bottom">
+                    <div class="d-flex">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Max Hawkins"
+                        class="rounded-circle me-3 review-avatar"
+                      />
+
+                      <div class="w-100">
+                        <div
+                          class="d-flex align-items-center flex-wrap gap-1 mb-1"
+                        >
+                          <h6 class="mb-0 fw-semibold small">Max Hawkins</h6>
+                          <small class="text-muted">2 Days ago</small>
+                        </div>
+
+                        <div class="text-warning small mb-2">★★★★★</div>
+
+                        <p class="text-muted small mb-2">
+                          Lectures were at a really good pace and I never felt
+                          lost. The instructor was well informed and allowed me
+                          to learn and navigate Figma easily.
+                        </p>
+
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                          <small class="text-muted"
+                            >Was this review helpful?</small
+                          >
+                          <button class="btn btn-primary btn-sm py-0 px-2">
+                            Yes
+                          </button>
+                          <button
+                            class="btn btn-outline-secondary btn-sm py-0 px-2"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Review 2 -->
+                  <div class="pb-4 mb-4 border-bottom">
+                    <div class="d-flex">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Arthur Williamson"
+                        class="rounded-circle me-3 review-avatar"
+                      />
+
+                      <div class="w-100">
+                        <div
+                          class="d-flex align-items-center flex-wrap gap-1 mb-1"
+                        >
+                          <h6 class="mb-0 fw-semibold small">
+                            Arthur Williamson
+                          </h6>
+                          <small class="text-muted">Days ago</small>
+                        </div>
+
+                        <div class="text-warning small mb-2">★★★★☆</div>
+
+                        <p class="text-muted small mb-2">
+                          Its pretty good. Just a reminder that there are also
+                          students with Windows, meaning Figma is a bit
+                          different of yours. Thank you!
+                        </p>
+
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                          <small class="text-muted"
+                            >Was this review helpful?</small
+                          >
+                          <button class="btn btn-primary btn-sm py-0 px-2">
+                            Yes
+                          </button>
+                          <button
+                            class="btn btn-outline-secondary btn-sm py-0 px-2"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Review 3 -->
+                  <div class="pb-4 mb-4 border-bottom">
+                    <div class="d-flex">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Claire Jones"
+                        class="rounded-circle me-3 review-avatar"
+                      />
+
+                      <div class="w-100">
+                        <div
+                          class="d-flex align-items-center flex-wrap gap-1 mb-1"
+                        >
+                          <h6 class="mb-0 fw-semibold small">Claire Jones</h6>
+                          <small class="text-muted">4 Days ago</small>
+                        </div>
+
+                        <div class="text-warning small mb-2">★★★★☆</div>
+
+                        <p class="text-muted small mb-2">
+                          Great course for learning Figma, the only bad detail
+                          would be that some icons are not included in the
+                          assets. But 90% of the icons needed are included, and
+                          the voice of the instructor was very clear and easy to
+                          understood.
+                        </p>
+
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                          <small class="text-muted"
+                            >Was this review helpful?</small
+                          >
+                          <button class="btn btn-primary btn-sm py-0 px-2">
+                            Yes
+                          </button>
+                          <button
+                            class="btn btn-outline-secondary btn-sm py-0 px-2"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Review 4 -->
+                  <div>
+                    <div class="d-flex">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Bessie Pena"
+                        class="rounded-circle me-3 review-avatar"
+                      />
+
+                      <div class="w-100">
+                        <div
+                          class="d-flex align-items-center flex-wrap gap-1 mb-1"
+                        >
+                          <h6 class="mb-0 fw-semibold small">Bessie Pena</h6>
+                          <small class="text-muted">5 Days ago</small>
+                        </div>
+
+                        <div class="text-warning small mb-2">★★★★★</div>
+
+                        <p class="text-muted small mb-2">
+                          I have really enjoyed this class and learned a lot,
+                          found it very inspiring and helpful, thank you!
+                        </p>
+
+                        <div class="d-flex align-items-center flex-wrap gap-2">
+                          <small class="text-muted"
+                            >Was this review helpful?</small
+                          >
+                          <button class="btn btn-primary btn-sm py-0 px-2">
+                            Yes
+                          </button>
+                          <button
+                            class="btn btn-outline-secondary btn-sm py-0 px-2"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="Transcript-pane"
+                role="tabpanel"
+                aria-labelledby="Transcript"
+                tabindex="0"
+              >
+                <div class="container my-5">
+                  <h5 class="fw-bold mb-4">
+                    Transcript from the "Introduction" Lesson
+                  </h5>
+
+                  <div class="mb-4">
+                    <h6 class="fw-semibold">
+                      Course Overview
+                      <span class="text-primary ms-2">[00:00:00]</span>
+                    </h6>
+                    <p class="text-muted mb-0">
+                      My name is John Deo and I work as human duct tape at
+                      Gatsby, that means that I do a lot of different things.
+                      Everything from dev roll to writing content to writing
+                      code. And I used to work as an architect at IBM. I live in
+                      Portland, Oregon.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h6 class="fw-semibold">
+                      Introduction
+                      <span class="text-primary ms-2">[00:00:16]</span>
+                    </h6>
+                    <p class="text-muted mb-0">
+                      We'll dive into GraphQL, the fundamentals of GraphQL.
+                      We're only gonna use the pieces of it that we need to
+                      build in Gatsby. We're not gonna be doing a deep dive into
+                      what GraphQL is or the language specifics. We're also
+                      gonna get into MDX. MDX is a way to write React components
+                      in your markdown.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h6 class="fw-semibold">
+                      Why Take This Course?
+                      <span class="text-primary ms-2">[00:00:37]</span>
+                    </h6>
+                    <p class="text-muted mb-0">
+                      We'll dive into GraphQL, the fundamentals of GraphQL.
+                      We're only gonna use the pieces of it that we need to
+                      build in Gatsby. We're not gonna be doing a deep dive into
+                      what GraphQL is or the language specifics. We're also
+                      gonna get into MDX. MDX is a way to write React components
+                      in your markdown.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h6 class="fw-semibold">
+                      A Look at the Demo Application
+                      <span class="text-primary ms-2">[00:00:54]</span>
+                    </h6>
+                    <p class="text-muted mb-0">
+                      We'll dive into GraphQL, the fundamentals of GraphQL.
+                      We're only gonna use the pieces of it that we need to
+                      build in Gatsby. We're not gonna be doing a deep dive into
+                      what GraphQL is or the language specifics. We're also
+                      gonna get into MDX. MDX is a way to write React components
+                      in your markdown. We'll dive into GraphQL, the
+                      fundamentals of GraphQL. We're only gonna use the pieces
+                      of it that we need to build in Gatsby. We're not gonna be
+                      doing a deep dive into what GraphQL is or the language
+                      specifics. We're also gonna get into MDX. MDX is a way to
+                      write React components in your markdown.
+                    </p>
+                  </div>
+
+                  <div class="mb-4">
+                    <h6 class="fw-semibold">
+                      Summarys
+                      <span class="text-primary ms-2">[00:01:31]</span>
+                    </h6>
+                    <p class="text-muted mb-0">
+                      We'll dive into GraphQL, the fundamentals of GraphQL.
+                      We're only gonna use the pieces of it that we need to
+                      build in Gatsby. We're not gonna be doing a deep dive into
+                      what GraphQL is or the language specifics. We're also
+                      gonna get into MDX. MDX is a way to write React components
+                      in your markdown.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="FAQS-pane"
+                role="tabpanel"
+                aria-labelledby="FAQS"
+                tabindex="0"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-lg-4 content_right_side d-flex flex-column justify-content-center align-items-center"
+        >
+          <div
+            class="card card-video mb-3 rounded-3"
+            style="width: 22.25rem; border: 2px solid white"
+          >
+            <img
+              class="p-1 rounded-3"
+              style="height: 13rem"
+              src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+              alt=""
+            />
+            <div class="card-body p-4">
+              <div class="mb-3">
+                <span class="fw-bold fs-2 content_main_card_heading">$600</span>
+                <span
+                  class="fw-light content_main_card_heading_cross text-decoration-line-through ms-2"
+                  >$750</span
+                >
+              </div>
+              <button type="button " class="mb-2 btn btn-primary">
+                Start Free Month
+              </button>
+              <button type="button" class="mb-2 btn btn-outline-primary">
+                Get Full Access
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="card-text card-video course-info mb-3 rounded-1"
+            style="width: 22rem"
+          >
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item fw-bold py-3">What’s included</li>
+
+              <li class="list-group-item">
+                <i class="bi bi-play-circle me-2" style="color: blueviolet"></i
+                >12 hours video
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-trophy me-2 text-success"></i>Certificate
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-calendar4 me-2 text-primary"></i>12 Article
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-camera-video me-2"></i>Watch Offline
+              </li>
+              <li class="list-group-item">
+                <i class="bi bi-clock me-2 text-warning"></i>Lifetime access
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="card card-video instructor-detail mb-0 rounded-1"
+            style="width: 22rem"
+          >
+            <div class="card-body card-person bg-white">
+              <div class="d-flex align-items-center">
+                <div class="position-relative">
+                  <img
+                    src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                    alt=""
+                    class="rounded-circle"
+                    style="height: 60px; width: 60px"
+                  />
+                </div>
+                <div class="ms-4">
+                  <h6 class="mb-0">Jenny Wilson</h6>
+                  <p class="mb-1 fs-6">Front-end Developer, Designer</p>
+                  <span class="fs-6 text-warning">4.5</span>
+                  <span class="mdi mdi-star me-2">Instructor Rating</span>
+                </div>
+              </div>
+              <div class="border-top mt-3 border-bottom mb-3 row">
+                <div class="col">
+                  <div class="pe-1 ps-2 py-3">
+                    <h5 class="mb-0">11,604</h5>
+                    <span>Students</span>
+                  </div>
+                </div>
+                <div class="border-start col">
+                  <div class="pe-1 ps-3 py-3">
+                    <h5 class="mb-0">32</h5>
+                    <span>Courses</span>
+                  </div>
+                </div>
+                <div class="border-start col">
+                  <div class="pe-1 ps-3 py-3">
+                    <h5 class="mb-0">12,230</h5>
+                    <span>Reviews</span>
+                  </div>
+                </div>
+              </div>
+              <p class="fs-0">
+                I am an Innovation designer focussing on UX/UI based in Berlin.
+                As a creative resident at Figma explored the city of the future
+                and how new technologies.
+              </p>
+              <a
+                class="btn btn-outline-secondary btn-sm"
+                href="/marketing/instructor/instructor-edit-profile/"
+                >View Details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="recommended-section">
+      <div class="container recommended-container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="recommended-title">Recommended to you</h2>
+          </div>
+        </div>
+
+        <div class="recommended-slider-area">
+          <div class="row justify-content-center recommended-cards-row">
+            <!-- card 1 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  class="card-img-top card_index_img"
+                  alt="GraphQL"
+                />
+                <div class="card-body pb-0">
+                  <h5 class="card-title">
+                    <a href=""
+                      >GraphQL: introduction to graphQL for beginners</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 40m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">2.5</span>
+                    <span class="fw-light text-muted">(1,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$500</span>
+                    <span class="fw-light text-decoration-line-through ms-2"
+                      >$600</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Brooklyn Simmons"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Brooklyn Simmons</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  class="card-img-top card_index_img"
+                  alt="JavaScript"
+                />
+                <div class="card-body pb-0">
+                  <h5 class="card-title">
+                    <a href="">A Complete Beginner’s Guide to JavaScript</a>
+                  </h5>
+                  <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">4h 10m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">3.5</span>
+                    <span class="fw-light text-muted">(7,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$700</span>
+                    <span class="fw-light text-decoration-line-through ms-2"
+                      >$850</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Jenny Wilson"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Jenny Wilson</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Node js"
+                />
+                <div class="card-body pb-0">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Beginning Node.js, Express &amp; MongoDB Development</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.0</span>
+                    <span class="fw-light text-muted">(15,700)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$800</span>
+                    <span class="fw-light text-decoration-line-through ms-2"
+                      >$950</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
+                        alt="Sina Ray"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sina Ray</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Laravel"
+                />
+                <div class="card-body pb-0">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Laravel: The Ultimate Beginner’s Guide to Learn</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-center gap-3 mb-2 flex-wrap">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">1h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Beginner</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.5</span>
+                    <span class="fw-light text-muted">(2,500)</span>
+                  </div>
+
+                  <div class="mt-2 pt-1">
+                    <span class="fw-bold fs-6">$170</span>
+                    <span class="fw-light text-decoration-line-through ms-2"
+                      >$220</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        alt="Sobo Rikhan"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sobo Rikhan</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="container banner_container">
+          <footer
+            class="d-flex justify-content-between align-items-center py-2 row"
+          >
+            <p
+              class="col-md-4 col-lg-6 mb-0 text-body-secondary px-0"
+              style="line-height: 22.4px; font-size: 14px"
+            >
+              © 2024 Geeks. All Rights Reserved
+            </p>
+            <ul class="nav col-md-4 col-lg-6 justify-content-end pe-lg-4">
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary pe-3 m-0 p-0"
+                  style="font-size: 14px; line-height: 24px; font-weight: 400"
+                  >Privacy</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary px-3 m-0 p-0"
+                  style="font-size: 14px; line-height: 24px"
+                  >Term</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary p-0 px-3 m-0"
+                  style="font-size: 14px; line-height: 24px"
+                  >Feedback</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#"
+                  class="nav-link text-body-secondary ps-3 p-0 m-0 me-4"
+                  style="font-size: 14px; line-height: 24px"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
