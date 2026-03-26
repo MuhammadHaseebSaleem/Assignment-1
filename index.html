@@ -6,7 +6,7 @@
     <title>Geeks React</title>
     <link
       rel="shortcut icon"
-      href="./home_images/imgi_1_favicon.ico"
+      href="./assets/imgi_1_favicon.ico"
       type="image/x-icon"
     />
 
@@ -30,72 +30,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css_files/nav_bar.css" />
 
-    <style>
-      @media (max-width: 991.98px) {
-        .banner_container,
-        .recommended-container {
-          width: 100% !important;
-          max-width: 100% !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          padding-left: 12px !important;
-          padding-right: 12px !important;
-        }
-
-        .banner,
-        .banner_buttom,
-        .recommended-section,
-        .footer {
-          overflow: hidden;
-        }
-
-        .banner .row,
-        .banner_buttom .row {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-        }
-
-        .banner h1 {
-          font-size: clamp(1.9rem, 6vw, 2.75rem);
-          line-height: 1.2;
-          word-break: break-word;
-        }
-
-        .banner p {
-          font-size: 1rem;
-          line-height: 1.6;
-          word-break: break-word;
-        }
-
-        .banner img {
-          display: block;
-          max-width: 100%;
-          height: auto;
-          margin: 0 auto;
-        }
-
-        .search-wrap {
-          width: 100%;
-        }
-
-        .recommended-arrow {
-          display: none;
-        }
-
-        .nav_submain .dropdown-menu {
-          position: static !important;
-          transform: none !important;
-          width: 100%;
-          margin-top: 0.5rem;
-        }
-
-        .nav_submain .submenu-menu {
-          margin-left: 0 !important;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./css_files/cards.css" />
+    <link rel="stylesheet" href="./css_files/banner.css" />
+    <link rel="stylesheet" href="./css_files/index.css" />
+    <style></style>
   </head>
 
   <body>
@@ -104,7 +44,7 @@
         <div class="container-fluid ps-3 pe-1">
           <a class="navbar-brand py-0 me-0" href="#">
             <img
-              src="home_images/logo.e22c846d87ff5a1252df471397badc6d.svg"
+              src="assets/logo.e22c846d87ff5a1252df471397badc6d.svg"
               alt="Logo"
               class="nav-logo"
             />
@@ -188,7 +128,7 @@
                 aria-expanded="false"
               >
                 <img
-                  src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                  src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                   alt="User avatar"
                   class="rounded-circle nav-avatar"
                 />
@@ -961,7 +901,7 @@
                   aria-expanded="false"
                 >
                   <img
-                    src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                    src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                     alt="User avatar"
                     class="rounded-circle nav-avatar"
                   />
@@ -995,7 +935,7 @@
       </nav>
     </header>
 
-    <div class="container-fluid banner p-0 m-0">
+    <div class="container-fluid banner ps-3 m-0">
       <div class="container banner_container">
         <div class="align-items-center g-0 row">
           <div class="col-12 col-lg-6 col-xl-5 py-5 py-lg-0 text-start">
@@ -1020,7 +960,7 @@
             class="text-center text-lg-end col-12 col-lg-6 col-xl-7 mt-4 mt-lg-0"
           >
             <img
-              src="./home_images/hero-img.c1489dfacfd7fadae59a.png"
+              src="./assets/hero-img.c1489dfacfd7fadae59a.png"
               alt="not found"
               class="img-fluid"
             />
@@ -1030,7 +970,7 @@
     </div>
     <div class="container-fuild banner_buttom">
       <section class="bg-white py-4 shadow-sm">
-        <div class="container banner_container">
+        <div class="container" style="padding-left: 14px !important">
           <div class="row align-items-center g-4 mx-0">
             <div class="col-12 col-lg-4 ps-0">
               <div class="d-flex align-items-center">
@@ -1075,13 +1015,10 @@
     </div>
 
     <section class="recommended-section">
-      <div class="container recommended-container banner_container">
+      <div class="container recommended-container adjust_container">
         <div class="row">
           <div class="col-12">
-            <h2
-              class="recommended-title mx-2 mb-4"
-              style="letter-spacing: -0.352px"
-            ></h2>
+            <h2 class="recommended-title mx-2 mb-4">Recommended to you</h2>
           </div>
         </div>
 
@@ -1089,7 +1026,7 @@
           <!-- visible only, no functionality -->
           <button
             type="button"
-            class="recommended-arrow recommended-arrow-prev"
+            class="recommended-arrow recommended-arrow-prev bg-white d-sm-none d-md-none d-lg-flex"
             aria-label="Previous"
           >
             <i class="bi bi-chevron-left"></i>
@@ -1097,7 +1034,7 @@
 
           <button
             type="button"
-            class="recommended-arrow recommended-arrow-next"
+            class="recommended-arrow recommended-arrow-next bg-white d-sm-none d-md-none d-lg-flex"
             aria-label="Next"
           >
             <i class="bi bi-chevron-right"></i>
@@ -1113,7 +1050,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  src="./assets/course-graphql.f5dec42e4ae0102ebffa.jpg"
                   class="card-img-top card_index_img"
                   alt="GraphQL"
                 />
@@ -1135,8 +1072,12 @@
                     </div>
                   </div>
 
-                  <div class="mb-2">
-                    <span class="text-warning fs-6">
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-start"
+                  >
+                    <span
+                      class="text-warning align-items-start justify-content-start fs-6 d-flex gap-1"
+                    >
                       <i class="bi bi-star-fill card_stars"></i>
                       <i class="bi bi-star-fill card_stars"></i>
                       <i class="bi bi-star-fill card_stars"></i>
@@ -1147,7 +1088,7 @@
                     <span class="fw-light text-muted">(1,500)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$500</span>
                     <span class="fw-light text-decoration-line-through"
                       >$600</span
@@ -1159,7 +1100,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Brooklyn Simmons"
                         class="rounded-circle avatar-xs"
                       />
@@ -1186,7 +1127,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  src="./assets/course-javascript.8afdeff32816e30422da.jpg"
                   class="card-img-top card_index_img"
                   alt="JavaScript"
                 />
@@ -1218,7 +1159,7 @@
                     <span class="fw-light text-muted">(7,500)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$700</span>
                     <span class="fw-light text-decoration-line-through"
                       >$850</span
@@ -1230,7 +1171,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Jenny Wilson"
                         class="rounded-circle avatar-xs"
                       />
@@ -1257,7 +1198,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
+                  src="./assets/course-node.291fe1cded8ebab181ab.jpg"
                   class="card-img-top card_index_img"
                   alt="Node js"
                 />
@@ -1291,7 +1232,7 @@
                     <span class="fw-light text-muted">(15,700)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$800</span>
                     <span class="fw-light text-decoration-line-through"
                       >$950</span
@@ -1303,7 +1244,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
+                        src="./assets/avatar-3.d3ce7f20113e7d124501.jpg"
                         alt="Sina Ray"
                         class="rounded-circle avatar-xs"
                       />
@@ -1330,7 +1271,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  src="./assets/course-laravel.48ab426cd3f0adc40dd9.jpg"
                   class="card-img-top card_index_img"
                   alt="Laravel"
                 />
@@ -1364,7 +1305,7 @@
                     <span class="fw-light text-muted">(2,500)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$170</span>
                     <span class="fw-light text-decoration-line-through"
                       >$220</span
@@ -1376,7 +1317,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        src="./assets/avatar-9.ce9a73de84b5e2cc414c.jpg"
                         alt="Sobo Rikhan"
                         class="rounded-circle avatar-xs"
                       />
@@ -1399,25 +1340,42 @@
     </section>
 
     <section class="recommended-section">
-      <div class="container recommended-container">
+      <div class="container recommended-container adjust_container">
         <div class="row">
           <div class="col-12">
-            <h2 class="recommended-title">Most Popular</h2>
+            <h2 class="recommended-title mx-2 mb-4">Most Popular</h2>
           </div>
         </div>
 
         <div class="recommended-slider-area">
+          <!-- visible only, no functionality -->
+          <button
+            type="button"
+            class="recommended-arrow recommended-arrow-prev bg-white d-sm-none d-md-none d-lg-flex"
+            aria-label="Previous"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <button
+            type="button"
+            class="recommended-arrow recommended-arrow-next bg-white d-sm-none d-md-none d-lg-flex"
+            aria-label="Next"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
           <div class="row justify-content-center recommended-cards-row">
             <!-- card 1 -->
             <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 justify-content-center d-flex"
             >
               <div
                 class="card index_card recommended-card-box"
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  src="./assets/course-graphql.f5dec42e4ae0102ebffa.jpg"
                   class="card-img-top card_index_img"
                   alt="GraphQL"
                 />
@@ -1439,8 +1397,12 @@
                     </div>
                   </div>
 
-                  <div class="mb-2">
-                    <span class="text-warning fs-6">
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-start"
+                  >
+                    <span
+                      class="text-warning align-items-start justify-content-start fs-6 d-flex gap-1"
+                    >
                       <i class="bi bi-star-fill card_stars"></i>
                       <i class="bi bi-star-fill card_stars"></i>
                       <i class="bi bi-star-fill card_stars"></i>
@@ -1451,7 +1413,7 @@
                     <span class="fw-light text-muted">(1,500)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$500</span>
                     <span class="fw-light text-decoration-line-through"
                       >$600</span
@@ -1463,7 +1425,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Brooklyn Simmons"
                         class="rounded-circle avatar-xs"
                       />
@@ -1483,14 +1445,14 @@
 
             <!-- card 2 -->
             <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
             >
               <div
                 class="card index_card recommended-card-box"
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  src="./assets/course-javascript.8afdeff32816e30422da.jpg"
                   class="card-img-top card_index_img"
                   alt="JavaScript"
                 />
@@ -1522,7 +1484,7 @@
                     <span class="fw-light text-muted">(7,500)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$700</span>
                     <span class="fw-light text-decoration-line-through"
                       >$850</span
@@ -1534,7 +1496,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Jenny Wilson"
                         class="rounded-circle avatar-xs"
                       />
@@ -1554,7 +1516,331 @@
 
             <!-- card 3 -->
             <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./assets/course-node.291fe1cded8ebab181ab.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Node js"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Beginning Node.js, Express &amp; MongoDB Development</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Intermediate</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.0</span>
+                    <span class="fw-light text-muted">(15,700)</span>
+                  </div>
+
+                  <div class="">
+                    <span class="fw-bold fs-6">$800</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$950</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./assets/avatar-3.d3ce7f20113e7d124501.jpg"
+                        alt="Sina Ray"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sina Ray</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 4 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./assets/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  class="card-img-top card_index_img"
+                  alt="Laravel"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >Laravel: The Ultimate Beginner’s Guide to Learn</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">1h 00m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Beginner</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">4.5</span>
+                    <span class="fw-light text-muted">(2,500)</span>
+                  </div>
+
+                  <div class="">
+                    <span class="fw-bold fs-6">$170</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$220</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./assets/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        alt="Sobo Rikhan"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Sobo Rikhan</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="recommended-section pb-5">
+      <div class="container recommended-container pb-4 mb-2 adjust_container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="recommended-title mx-2 mb-4">Trending</h2>
+          </div>
+        </div>
+
+        <div class="recommended-slider-area">
+          <!-- visible only, no functionality -->
+          <button
+            type="button"
+            class="recommended-arrow recommended-arrow-prev bg-white d-sm-none d-md-none d-lg-flex"
+            aria-label="Previous"
+          >
+            <i class="bi bi-chevron-left"></i>
+          </button>
+
+          <button
+            type="button"
+            class="recommended-arrow recommended-arrow-next bg-white d-sm-none d-md-none d-lg-flex"
+            aria-label="Next"
+          >
+            <i class="bi bi-chevron-right"></i>
+          </button>
+
+          <div class="row justify-content-center recommended-cards-row">
+            <!-- card 1 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 justify-content-center d-flex"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./assets/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  class="card-img-top card_index_img"
+                  alt="GraphQL"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href=""
+                      >GraphQL: introduction to graphQL for beginners</a
+                    >
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">2h 40m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div
+                    class="mb-3 d-flex align-items-center justify-content-start"
+                  >
+                    <span
+                      class="text-warning align-items-start justify-content-start fs-6 d-flex gap-1"
+                    >
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">2.5</span>
+                    <span class="fw-light text-muted">(1,500)</span>
+                  </div>
+
+                  <div class="">
+                    <span class="fw-bold fs-6">$500</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$600</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Brooklyn Simmons"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Brooklyn Simmons</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
+            >
+              <div
+                class="card index_card recommended-card-box"
+                style="width: 15rem"
+              >
+                <img
+                  src="./assets/course-javascript.8afdeff32816e30422da.jpg"
+                  class="card-img-top card_index_img"
+                  alt="JavaScript"
+                />
+                <div class="card-body p-4">
+                  <h5 class="card-title">
+                    <a href="">A Complete Beginner’s Guide to JavaScript</a>
+                  </h5>
+                  <div class="d-flex align-items-start gap-2 mb-2">
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-clock me-1"></i>
+                      <span class="fw-light">4h 10m</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mt-2">
+                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
+                      <span class="fw-light">Advance</span>
+                    </div>
+                  </div>
+
+                  <div class="mb-2">
+                    <span class="text-warning fs-6">
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-fill card_stars"></i>
+                      <i class="bi bi-star-half card_stars"></i>
+                      <i class="bi bi-star card_stars"></i>
+                    </span>
+                    <span class="fw-semibold text-warning ms-1">3.5</span>
+                    <span class="fw-light text-muted">(7,500)</span>
+                  </div>
+
+                  <div class="">
+                    <span class="fw-bold fs-6">$700</span>
+                    <span class="fw-light text-decoration-line-through"
+                      >$850</span
+                    >
+                  </div>
+                </div>
+
+                <div class="card-footer recommended-card-footer">
+                  <div class="align-items-center g-0 row">
+                    <div class="col-auto">
+                      <img
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
+                        alt="Jenny Wilson"
+                        class="rounded-circle avatar-xs"
+                      />
+                    </div>
+                    <div class="col ms-2">
+                      <span class="fw-light">Jenny Wilson</span>
+                    </div>
+                    <div class="col-auto">
+                      <a href="#" class="recommended-bookmark">
+                        <i class="bi bi-bookmark"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
             >
               <div
                 class="card index_card recommended-card-box"
@@ -1595,7 +1881,7 @@
                     <span class="fw-light text-muted">(15,700)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$800</span>
                     <span class="fw-light text-decoration-line-through"
                       >$950</span
@@ -1627,7 +1913,7 @@
 
             <!-- card 4 -->
             <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
+              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col px-0 d-flex justify-content-center"
             >
               <div
                 class="card index_card recommended-card-box"
@@ -1668,310 +1954,7 @@
                     <span class="fw-light text-muted">(2,500)</span>
                   </div>
 
-                  <div class="mt-2 pt-1">
-                    <span class="fw-bold fs-6">$170</span>
-                    <span class="fw-light text-decoration-line-through"
-                      >$220</span
-                    >
-                  </div>
-                </div>
-
-                <div class="card-footer recommended-card-footer">
-                  <div class="align-items-center g-0 row">
-                    <div class="col-auto">
-                      <img
-                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
-                        alt="Sobo Rikhan"
-                        class="rounded-circle avatar-xs"
-                      />
-                    </div>
-                    <div class="col ms-2">
-                      <span class="fw-light">Sobo Rikhan</span>
-                    </div>
-                    <div class="col-auto">
-                      <a href="#" class="recommended-bookmark">
-                        <i class="bi bi-bookmark"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="recommended-section pb-5 mb-5">
-      <div class="container recommended-container">
-        <div class="row">
-          <div class="col-12">
-            <h2 class="recommended-title">Trending</h2>
-          </div>
-        </div>
-
-        <div class="recommended-slider-area">
-          <div class="row justify-content-center recommended-cards-row">
-            <!-- card 1 -->
-            <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
-            >
-              <div
-                class="card index_card recommended-card-box"
-                style="width: 15rem"
-              >
-                <img
-                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
-                  class="card-img-top card_index_img"
-                  alt="GraphQL"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title">
-                    <a href=""
-                      >GraphQL: introduction to graphQL for beginners</a
-                    >
-                  </h5>
-                  <div class="d-flex align-items-start gap-2 mb-2">
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-clock me-1"></i>
-                      <span class="fw-light">2h 40m</span>
-                    </div>
-
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
-                      <span class="fw-light">Advance</span>
-                    </div>
-                  </div>
-
-                  <div class="mb-2">
-                    <span class="text-warning fs-6">
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-half card_stars"></i>
-                      <i class="bi bi-star card_stars"></i>
-                    </span>
-                    <span class="fw-semibold text-warning ms-1">2.5</span>
-                    <span class="fw-light text-muted">(1,500)</span>
-                  </div>
-
-                  <div class="mt-2 pt-1">
-                    <span class="fw-bold fs-6">$500</span>
-                    <span class="fw-light text-decoration-line-through"
-                      >$600</span
-                    >
-                  </div>
-                </div>
-
-                <div class="card-footer recommended-card-footer">
-                  <div class="align-items-center g-0 row">
-                    <div class="col-auto">
-                      <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
-                        alt="Brooklyn Simmons"
-                        class="rounded-circle avatar-xs"
-                      />
-                    </div>
-                    <div class="col ms-2">
-                      <span class="fw-light">Brooklyn Simmons</span>
-                    </div>
-                    <div class="col-auto">
-                      <a href="#" class="recommended-bookmark">
-                        <i class="bi bi-bookmark"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- card 2 -->
-            <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
-            >
-              <div
-                class="card index_card recommended-card-box"
-                style="width: 15rem"
-              >
-                <img
-                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
-                  class="card-img-top card_index_img"
-                  alt="JavaScript"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title">
-                    <a href="">A Complete Beginner’s Guide to JavaScript</a>
-                  </h5>
-                  <div class="d-flex align-items-start gap-2 mb-2">
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-clock me-1"></i>
-                      <span class="fw-light">4h 10m</span>
-                    </div>
-
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
-                      <span class="fw-light">Advance</span>
-                    </div>
-                  </div>
-
-                  <div class="mb-2">
-                    <span class="text-warning fs-6">
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-half card_stars"></i>
-                      <i class="bi bi-star card_stars"></i>
-                    </span>
-                    <span class="fw-semibold text-warning ms-1">3.5</span>
-                    <span class="fw-light text-muted">(7,500)</span>
-                  </div>
-
-                  <div class="mt-2 pt-1">
-                    <span class="fw-bold fs-6">$700</span>
-                    <span class="fw-light text-decoration-line-through"
-                      >$850</span
-                    >
-                  </div>
-                </div>
-
-                <div class="card-footer recommended-card-footer">
-                  <div class="align-items-center g-0 row">
-                    <div class="col-auto">
-                      <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
-                        alt="Jenny Wilson"
-                        class="rounded-circle avatar-xs"
-                      />
-                    </div>
-                    <div class="col ms-2">
-                      <span class="fw-light">Jenny Wilson</span>
-                    </div>
-                    <div class="col-auto">
-                      <a href="#" class="recommended-bookmark">
-                        <i class="bi bi-bookmark"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- card 3 -->
-            <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
-            >
-              <div
-                class="card index_card recommended-card-box"
-                style="width: 15rem"
-              >
-                <img
-                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
-                  class="card-img-top card_index_img"
-                  alt="Node js"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title">
-                    <a href=""
-                      >Beginning Node.js, Express &amp; MongoDB Development</a
-                    >
-                  </h5>
-                  <div class="d-flex align-items-start gap-2 mb-2">
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-clock me-1"></i>
-                      <span class="fw-light">2h 00m</span>
-                    </div>
-
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
-                      <span class="fw-light">Intermediate</span>
-                    </div>
-                  </div>
-
-                  <div class="mb-2">
-                    <span class="text-warning fs-6">
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-half card_stars"></i>
-                    </span>
-                    <span class="fw-semibold text-warning ms-1">4.0</span>
-                    <span class="fw-light text-muted">(15,700)</span>
-                  </div>
-
-                  <div class="mt-2 pt-1">
-                    <span class="fw-bold fs-6">$800</span>
-                    <span class="fw-light text-decoration-line-through"
-                      >$950</span
-                    >
-                  </div>
-                </div>
-
-                <div class="card-footer recommended-card-footer">
-                  <div class="align-items-center g-0 row">
-                    <div class="col-auto">
-                      <img
-                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
-                        alt="Sina Ray"
-                        class="rounded-circle avatar-xs"
-                      />
-                    </div>
-                    <div class="col ms-2">
-                      <span class="fw-light">Sina Ray</span>
-                    </div>
-                    <div class="col-auto">
-                      <a href="#" class="recommended-bookmark">
-                        <i class="bi bi-bookmark"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- card 4 -->
-            <div
-              class="col-12 col-md-6 col-lg-3 mb-4 recommended-col d-flex justify-content-center"
-            >
-              <div
-                class="card index_card recommended-card-box"
-                style="width: 15rem"
-              >
-                <img
-                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
-                  class="card-img-top card_index_img"
-                  alt="Laravel"
-                />
-                <div class="card-body p-4">
-                  <h5 class="card-title">
-                    <a href=""
-                      >Laravel: The Ultimate Beginner’s Guide to Learn</a
-                    >
-                  </h5>
-                  <div class="d-flex align-items-start gap-2 mb-2">
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-clock me-1"></i>
-                      <span class="fw-light">1h 00m</span>
-                    </div>
-
-                    <div class="d-flex align-items-center mt-2">
-                      <i class="bi bi-bar-chart-fill me-1 text-primary"></i>
-                      <span class="fw-light">Beginner</span>
-                    </div>
-                  </div>
-
-                  <div class="mb-2">
-                    <span class="text-warning fs-6">
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-fill card_stars"></i>
-                      <i class="bi bi-star-half card_stars"></i>
-                    </span>
-                    <span class="fw-semibold text-warning ms-1">4.5</span>
-                    <span class="fw-light text-muted">(2,500)</span>
-                  </div>
-
-                  <div class="mt-2 pt-1">
+                  <div class="">
                     <span class="fw-bold fs-6">$170</span>
                     <span class="fw-light text-decoration-line-through"
                       >$220</span
@@ -2005,9 +1988,9 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer mt-5">
       <div class="container-fluid">
-        <div class="container banner_container ps-0">
+        <div class="container adjust_container pe-0">
           <footer
             class="d-flex flex-column flex-lg-row justify-content-between align-items-center row text-center text-lg-start g-3 g-lg-0"
             style="padding-bottom: 11px !important"
@@ -2018,9 +2001,7 @@
             >
               © 2024 Geeks. All Rights Reserved
             </p>
-            <ul
-              class="nav col-12 col-lg-6 justify-content-center justify-content-lg-end pe-lg-4 flex-wrap"
-            >
+            <ul class="nav col-12 col-lg-6 pe-0 justify-content-lg-end pe-lg-3">
               <li class="nav-item">
                 <a
                   href="#"

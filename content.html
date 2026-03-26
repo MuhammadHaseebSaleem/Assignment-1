@@ -6,7 +6,7 @@
     <title>Geeks React</title>
     <link
       rel="shortcut icon"
-      href="./home_images/imgi_1_favicon.ico"
+      href="./assets/imgi_1_favicon.ico"
       type="image/x-icon"
     />
 
@@ -30,184 +30,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css_files/nav_bar.css" />
+    <link rel="stylesheet" href="./css_files/content.css" />
+    <link rel="stylesheet" href="./css_files/cards.css" />
+    <link rel="stylesheet" href="./css_files/banner.css" />
 
-    <style>
-      @media (max-width: 991.98px) {
-        .banner_container {
-          width: 100% !important;
-          max-width: 100% !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          padding-left: 0.75rem !important;
-          padding-right: 0.75rem !important;
-        }
-
-        .banner_content {
-          padding-top: 3rem !important;
-          padding-bottom: 3rem !important;
-        }
-
-        .banner_content .row,
-        .main {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-        }
-
-        .banner_content .row > div {
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-        }
-
-        .banner_content .col-lg-8 {
-          width: 100% !important;
-          max-width: 100% !important;
-          flex: 0 0 100% !important;
-          text-align: center !important;
-          align-items: center !important;
-        }
-
-        .banner_content .content_heading {
-          display: block;
-          width: 100% !important;
-          max-width: 100% !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          font-size: clamp(1.85rem, 5.8vw, 2.75rem) !important;
-          line-height: 1.2 !important;
-          white-space: normal !important;
-          overflow-wrap: anywhere;
-          word-break: break-word;
-        }
-
-        .banner_content .lead {
-          display: block;
-          width: 100% !important;
-          max-width: 42rem !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          padding-left: 0.25rem;
-          padding-right: 0.25rem;
-          font-size: 1rem !important;
-          line-height: 1.65 !important;
-          white-space: normal !important;
-          overflow-wrap: anywhere;
-        }
-
-        .banner_content .lead br {
-          display: none !important;
-        }
-
-        .banner_content .container-fluid.d-flex {
-          width: 100% !important;
-          max-width: 100% !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-          justify-content: center !important;
-          align-items: center !important;
-          flex-wrap: wrap !important;
-          gap: 0.5rem 0.75rem !important;
-        }
-
-        .banner_content .container-fluid.d-flex > * {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-        }
-
-        .main {
-          display: flex;
-          flex-direction: column;
-          align-items: center !important;
-        }
-
-        .content_left_side,
-        .content_right_side {
-          width: 100% !important;
-          max-width: 100% !important;
-          flex: 0 0 100% !important;
-          padding-left: 0 !important;
-          padding-right: 0 !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-        }
-
-        .content_left_side {
-          order: 1;
-          margin-bottom: 1.25rem !important;
-        }
-
-        .content_right_side {
-          order: 2;
-          justify-content: center !important;
-          align-items: center !important;
-        }
-
-        .content_left_side .course-detail,
-        .content_right_side .card-video,
-        .content_right_side .course-info,
-        .content_right_side .instructor-detail,
-        .content_right_side > .card,
-        .content_right_side > .card-text {
-          width: 100% !important;
-          max-width: 100% !important;
-          margin-left: auto !important;
-          margin-right: auto !important;
-        }
-
-        .content_left_side .nav-tabs {
-          flex-wrap: nowrap !important;
-          overflow-x: auto !important;
-          overflow-y: hidden !important;
-          -webkit-overflow-scrolling: touch;
-        }
-
-        .content_left_side .nav-tabs .nav-item {
-          flex: 0 0 auto !important;
-        }
-
-        .content_left_side .nav-tabs .nav-link {
-          white-space: nowrap !important;
-          margin-left: 0.5rem !important;
-          margin-right: 0.5rem !important;
-          padding-left: 0.75rem !important;
-          padding-right: 0.75rem !important;
-        }
-
-        .content_left_side .course_item,
-        .content_left_side .tab-pane .d-flex.justify-content-between {
-          flex-wrap: wrap !important;
-          gap: 0.5rem !important;
-        }
-
-        .content_right_side .btn {
-          width: 100% !important;
-        }
-
-        .footer footer {
-          justify-content: center !important;
-          text-align: center !important;
-          row-gap: 0.75rem !important;
-        }
-
-        .footer footer p,
-        .footer footer ul {
-          justify-content: center !important;
-          margin-bottom: 0 !important;
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        .banner_content .content_heading {
-          font-size: clamp(1.7rem, 7vw, 2.25rem) !important;
-        }
-
-        .banner_content .lead {
-          font-size: 0.95rem !important;
-        }
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <header>
@@ -215,7 +43,7 @@
         <div class="container-fluid ps-3 pe-1">
           <a class="navbar-brand py-0 me-0" href="#">
             <img
-              src="home_images/logo.e22c846d87ff5a1252df471397badc6d.svg"
+              src="assets/logo.e22c846d87ff5a1252df471397badc6d.svg"
               alt="Logo"
               class="nav-logo"
             />
@@ -959,7 +787,7 @@
                   aria-expanded="false"
                 >
                   <img
-                    src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                    src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                     alt="User avatar"
                     class="rounded-circle nav-avatar"
                   />
@@ -1827,7 +1655,7 @@
                   <div class="pb-4 mb-4 border-bottom">
                     <div class="d-flex">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Max Hawkins"
                         class="rounded-circle me-3 review-avatar"
                       />
@@ -1869,7 +1697,7 @@
                   <div class="pb-4 mb-4 border-bottom">
                     <div class="d-flex">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Arthur Williamson"
                         class="rounded-circle me-3 review-avatar"
                       />
@@ -1913,7 +1741,7 @@
                   <div class="pb-4 mb-4 border-bottom">
                     <div class="d-flex">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Claire Jones"
                         class="rounded-circle me-3 review-avatar"
                       />
@@ -1957,7 +1785,7 @@
                   <div>
                     <div class="d-flex">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Bessie Pena"
                         class="rounded-circle me-3 review-avatar"
                       />
@@ -2107,7 +1935,7 @@
             <img
               class="p-1 rounded-3"
               style="height: 13rem"
-              src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+              src="./assets/course-javascript.8afdeff32816e30422da.jpg"
               alt=""
             />
             <div class="card-body p-4">
@@ -2161,7 +1989,7 @@
               <div class="d-flex align-items-center">
                 <div class="position-relative">
                   <img
-                    src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                    src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                     alt=""
                     class="rounded-circle"
                     style="height: 60px; width: 60px"
@@ -2228,7 +2056,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-graphql.f5dec42e4ae0102ebffa.jpg"
+                  src="./assets/course-graphql.f5dec42e4ae0102ebffa.jpg"
                   class="card-img-top card_index_img"
                   alt="GraphQL"
                 />
@@ -2274,7 +2102,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Brooklyn Simmons"
                         class="rounded-circle avatar-xs"
                       />
@@ -2301,7 +2129,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-javascript.8afdeff32816e30422da.jpg"
+                  src="./assets/course-javascript.8afdeff32816e30422da.jpg"
                   class="card-img-top card_index_img"
                   alt="JavaScript"
                 />
@@ -2345,7 +2173,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-1.d2fd9642fd3628734b27.jpg"
+                        src="./assets/avatar-1.d2fd9642fd3628734b27.jpg"
                         alt="Jenny Wilson"
                         class="rounded-circle avatar-xs"
                       />
@@ -2372,7 +2200,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-node.291fe1cded8ebab181ab.jpg"
+                  src="./assets/course-node.291fe1cded8ebab181ab.jpg"
                   class="card-img-top card_index_img"
                   alt="Node js"
                 />
@@ -2418,7 +2246,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-3.d3ce7f20113e7d124501.jpg"
+                        src="./assets/avatar-3.d3ce7f20113e7d124501.jpg"
                         alt="Sina Ray"
                         class="rounded-circle avatar-xs"
                       />
@@ -2445,7 +2273,7 @@
                 style="width: 15rem"
               >
                 <img
-                  src="./home_images/course-laravel.48ab426cd3f0adc40dd9.jpg"
+                  src="./assets/course-laravel.48ab426cd3f0adc40dd9.jpg"
                   class="card-img-top card_index_img"
                   alt="Laravel"
                 />
@@ -2491,7 +2319,7 @@
                   <div class="align-items-center g-0 row">
                     <div class="col-auto">
                       <img
-                        src="./home_images/avatar-9.ce9a73de84b5e2cc414c.jpg"
+                        src="./assets/avatar-9.ce9a73de84b5e2cc414c.jpg"
                         alt="Sobo Rikhan"
                         class="rounded-circle avatar-xs"
                       />

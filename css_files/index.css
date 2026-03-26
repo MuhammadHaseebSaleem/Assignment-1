@@ -1,0 +1,266 @@
+* {
+  font-family: Inter, sans-serif !important;
+}
+
+.main-menu {
+  min-width: 220px;
+  padding: 10px 0;
+  margin-top: 8px;
+}
+
+.browse-menu {
+  min-width: 190px;
+}
+
+.landings-menu {
+  min-width: 246px;
+}
+
+.accounts-menu,
+.pages-menu {
+  min-width: 192px;
+}
+
+.menu-heading {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0 19.2px 8px;
+}
+
+.menu-item {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  padding: 2px 19.2px;
+}
+
+.menu-item:hover,
+.menu-item:focus,
+.active-item {
+  background-color: #f1f5f9 !important;
+  color: #754ffe !important;
+}
+
+.badge.rounded-1 {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 6px;
+}
+
+.more-menu {
+  min-width: 235px;
+  margin-top: 8px;
+}
+
+.more-item {
+  color: #1e293b;
+}
+
+.more-item:hover .more-title,
+.more-item:hover .more-desc,
+.more-item:hover .more-icon,
+.more-item:hover .version-text {
+  color: #754ffe;
+}
+
+.more-icon {
+  color: #754ffe;
+  font-size: 20px;
+  line-height: 1;
+  min-width: 22px;
+}
+
+.more-title {
+  color: #1e293b;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.more-desc {
+  color: #111827;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.version-text {
+  color: #754ffe;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* mobile */
+@media (max-width: 991.98px) {
+  .search-wrap {
+    max-width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .dropdown-submenu > .submenu-menu {
+    position: static;
+    display: none;
+    min-width: 100%;
+    margin: 0;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding-left: 12px;
+  }
+
+  .dropdown-submenu > .submenu-menu.show-submenu {
+    display: block;
+  }
+}
+
+.bg-light-warning {
+  color: #ca8135;
+  background-color: #ffeeda;
+}
+
+/* tab shifting section */
+.accordion-button {
+  --bs-accordion-btn-icon-width: 14px;
+  --bs-accordion-btn-icon-height: 14px;
+}
+.accordion-button::after {
+  font-weight: bolder !important;
+  font-size: 24px !important;
+  padding-right: 16px !important;
+}
+.accordion-button {
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+.accordion-button {
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  background-color: white;
+  outline: none;
+}
+
+.accordion-button:hover {
+  color: #754ffe;
+}
+
+.course_item:hover {
+  color: #754ffe;
+}
+
+.accordion-item {
+  border: none !important;
+  border-bottom: 0.5px solid #dddfe2 !important;
+}
+
+.review-progress {
+  height: 6px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.review-search-wrap {
+  width: 180px;
+}
+
+/* Change arrow color to black */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: inline-block;
+  color: #111827;
+
+  border: solid black;
+  /* create arrow using borders */
+}
+
+/* extra */
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+}
+
+* {
+  font-family: Inter, sans-serif !important;
+  scrollbar-width: thin;
+}
+
+.custom-line {
+  font-weight: 500 !important;
+}
+
+@media (min-width: 992px) {
+  .icons-mobile {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .icons-desktop {
+    display: none !important;
+  }
+}
+.dropdown-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+.fw-bold.fs-6 {
+  line-height: 14px !important;
+  font-size: 14px !important;
+}
+.fw-light.fw-light.text-decoration-line-through {
+  color: rgb(100, 116, 139);
+  font-size: 12px !important;
+  line-height: 12px !important;
+  font-weight: 400 !important;
+}
+.d-flex.align-items-start.gap-2.mb-2 {
+  color: rgb(100, 116, 139);
+  font-size: 14px !important;
+  line-height: 22px !important;
+  font-weight: 400 !important;
+}
+span.fw-light {
+  color: rgb(100, 116, 139);
+  font-size: 14px !important;
+  line-height: 22px !important;
+  font-weight: 400 !important;
+}
+.adjust_container {
+  padding-left: 0.875rem !important;
+}
