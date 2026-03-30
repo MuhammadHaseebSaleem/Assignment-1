@@ -1,14 +1,30 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-slate-800: #1e293b;
+  --color-slate-500: #64748b;
+  --color-primary: #754ffe;
+  --color-slate-300: #cbd5e1;
+  --color-border-light: #dbe2ea;
+  --color-border-soft: #dfe4ea;
+  --color-slate-100: #f1f5f9;
+  --color-slate-50: #f8fafc;
+  --color-amber-500: rgb(245, 158, 11);
+  --color-shadow-soft: rgba(15, 23, 42, 0.04);
+  --color-shadow-medium: rgba(15, 23, 42, 0.08);
+}
+
 /* CArd section */
 .card_section {
-  background-color: #f1f5f9;
+  background-color: var(--color-slate-100);
 }
 
 body {
-  background-color: #f1f5f9;
+  background-color: var(--color-slate-100);
 }
 
 .card-title a {
-  color: black;
+  color: var(--color-black);
   text-decoration: none;
 }
 .card-title {
@@ -17,28 +33,28 @@ body {
 }
 
 .card-title a:hover {
-  color: #754ffe;
+  color: var(--color-primary);
 }
 
 /* contern page css */
 .card-body > .btn-primary {
   width: 100% !important;
-  background-color: #754ffe;
-  outline-color: #754ffe;
-  border-color: #754ffe;
+  background-color: var(--color-primary);
+  outline-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .card-body > .btn-outline-primary {
   width: 100% !important;
-  color: #754ffe;
-  border-color: #754ffe;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .card-body > .btn-outline-primary:hover {
   width: 100% !important;
-  color: white;
-  background-color: #754ffe;
-  border-color: #754ffe;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 /* Below lg (less than 992px) */
@@ -74,7 +90,7 @@ body {
   font-size: 11px !important;
   font-weight: 400 !important;
 
-  color: rgb(245, 158, 11) !important;
+  color: var(--color-amber-500) !important;
   height: 11.65px !important;
   width: 12.27px !important;
 }
@@ -87,10 +103,10 @@ body {
   font-size: 16px !important;
   line-height: 26px !important;
   font-weight: 400 !important;
-  color: rgb(100, 116, 139);
+  color: var(--color-slate-500);
 }
 .recommended-section {
-  background: #f1f5f9;
+  background: var(--color-slate-100);
   padding-top: 88px;
   padding-bottom: 16px;
   overflow: hidden;
@@ -100,7 +116,7 @@ body {
 }
 .recommended-title {
   margin: 0 0 22px;
-  color: #1e293b !important;
+  color: var(--color-slate-800) !important;
   font-size: 2rem;
   letter-spacing: -0.352px !important;
   font-size: 24px !important;
@@ -120,15 +136,15 @@ body {
   top: 210px;
   width: 40px;
   height: 40px;
-  border: 1px solid #dbe2ea;
+  border: 1px solid var(--color-border-light);
   border-radius: 50%;
-  background: #f8fafc;
-  color: #cbd5e1;
+  background: var(--color-slate-50);
+  color: var(--color-slate-300);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 5;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 1px 2px var(--color-shadow-soft);
   pointer-events: none;
 }
 .recommended-arrow i {
@@ -142,19 +158,19 @@ body {
   right: -54px;
 } /* card shell only */
 .recommended-card-box {
-  border: 1px solid #dfe4ea;
+  border: 1px solid var(--color-border-soft);
   border-radius: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
-  background: #fff;
+  box-shadow: 0 1px 2px var(--color-shadow-soft);
+  background: var(--color-white);
 } /* keep your image class */
 .card_index_img {
   height: 150px;
   object-fit: cover;
 } /* footer fix */
 .recommended-card-footer {
-  background: #fff;
-  border-top: 1px solid #dfe4ea;
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border-soft);
   padding: 15px 24px;
   min-height: 54px;
 }
@@ -172,7 +188,7 @@ body {
   object-fit: cover;
 }
 .recommended-card-footer span {
-  color: #64748b;
+  color: var(--color-slate-500);
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400 !important;
@@ -181,7 +197,7 @@ body {
   text-overflow: ellipsis;
 }
 .recommended-bookmark {
-  color: #754ffe;
+  color: var(--color-primary);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -194,7 +210,7 @@ body {
 .recommended-card-box:hover {
   transform: translateY(-2px);
   transition: 0.25s ease;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 10px 24px var(--color-shadow-medium);
 } /* md: show 2 centered cards */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .recommended-cards-row {

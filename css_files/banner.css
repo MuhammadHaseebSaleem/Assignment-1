@@ -1,5 +1,17 @@
+:root {
+  --color-white: #fff;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-500: #64748b;
+  --color-primary: #754ffe;
+  --color-primary-light: #baa7fe;
+  --color-slate-300: #cbd5e1;
+  --color-amber-500: rgb(245, 158, 11);
+}
+
 .banner h1 {
-  color: #fff;
+  color: var(--color-white);
 
   font-size: 40px;
   font-weight: 500 !important;
@@ -14,7 +26,7 @@
 /* banner css */
 .left_banner {
   align-items: center;
-  color: #64748b;
+  color: var(--color-slate-500);
   display: flex;
   flex-wrap: wrap;
   font-size: 14px !important;
@@ -39,12 +51,12 @@
 }
 
 /* .banner_button {
-    background-color: #0f172a;
-    border-color: #0f172a;
+    background-color: var(--color-slate-900);
+    border-color: var(--color-slate-900);
     border-radius: 6px !important;
     border-style: solid !important;
     border-width: 1px !important;
-    color: #fff;
+    color: var(--color-white);
     display: inline-block !important;
     font-family: Inter !important;
     font-size: 14px !important;
@@ -72,27 +84,27 @@
   box-shadow: none !important;
 }
 .banner .btn-dark {
-  background-color: #0f172a;
-  border-color: #0f172a;
-  color: #fff;
+  background-color: var(--color-slate-900);
+  border-color: var(--color-slate-900);
+  color: var(--color-white);
 }
 .banner .btn-light {
-  background-color: #fff;
-  border-color: #cbd5e1;
-  color: #334155;
+  background-color: var(--color-white);
+  border-color: var(--color-slate-300);
+  color: var(--color-slate-700);
 }
 
 /* banner buttom */
 
 .banner_buttom h4 {
-  color: #1e293b;
+  color: var(--color-slate-800);
   font-family: Inter !important;
   font-weight: 600 !important;
   line-height: 24px !important;
   font-size: 16px !important;
 }
 .banner_buttom p {
-  color: #64748b;
+  color: var(--color-slate-500);
   font-family: Inter !important;
   font-size: 14px !important;
   line-height: 22.4px;
@@ -121,15 +133,15 @@
   font-size: 16px !important;
   font-weight: 400 !important;
 
-  color: rgb(245, 158, 11) !important;
+  color: var(--color-amber-500) !important;
 }
 /* banner css */
 .banner {
-  background-color: #754ffe !important;
+  background-color: var(--color-primary) !important;
 }
 
 .banner p {
-  color: #baa7fe;
+  color: var(--color-primary-light);
   margin-bottom: 1.5rem !important;
   font-size: 1.25rem;
   font-weight: 500;
@@ -137,7 +149,7 @@
 }
 
 .banner h1 {
-  color: white;
+  color: var(--color-white);
   font-weight: 700 !important;
   font-size: 2.5rem;
   letter-spacing: -0.05rem;
