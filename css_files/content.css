@@ -1,3 +1,6 @@
+@import url("nav_bar.css");
+@import url("banner.css");
+@import url("cards.css");
 :root {
   --color-white: #fff;
   --color-black: #000;
@@ -34,9 +37,6 @@
   --color-transparent-rgba: rgba(0, 0, 0, 0);
   --color-warm-gray-700: rgb(87, 82, 82);
 }
-@import url("nav_bar.css");
-@import url("banner.css");
-@import url("cards.css");
 
 .banner_content {
   padding-top: 56px;

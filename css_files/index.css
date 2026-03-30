@@ -1,3 +1,6 @@
+@import url("./nav_bar.css");
+@import url("./banner.css");
+@import url("./cards.css");
 :root {
   /* base colors */
   --color-white: #fff;
@@ -40,10 +43,6 @@
   --color-shadow-soft: rgba(15, 23, 42, 0.04);
   --color-shadow-medium: rgba(15, 23, 42, 0.08);
 }
-
-@import url("nav_bar.css");
-@import url("banner.css");
-@import url("cards.css");
 
 * {
   font-family: Inter, sans-serif !important;
