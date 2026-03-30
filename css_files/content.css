@@ -1,17 +1,42 @@
 :root {
   --color-white: #fff;
-  --color-slate-800: #1e293b;
-  --color-slate-500: #64748b;
+  --color-black: #000;
+
   --color-primary: #754ffe;
+  --color-primary-light: #baa7fe;
+
+  --color-gray-900: #111827;
+  --color-gray-400: #adb1b6;
+
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
   --color-slate-300: #cbd5e1;
-  --color-border-light: #dbe2ea;
-  --color-border-soft: #dfe4ea;
+  --color-slate-200: #e2e8f0;
   --color-slate-100: #f1f5f9;
   --color-slate-50: #f8fafc;
+
+  --color-border-light: #dbe2ea;
+  --color-border-soft: #dfe4ea;
+  --color-border-muted: #d4d8dd;
+  --color-divider: #dddfe2;
+
+  --color-warning-text: #ca8135;
+  --color-warning-bg: #ffeeda;
   --color-amber-500: rgb(245, 158, 11);
+
   --color-shadow-soft: rgba(15, 23, 42, 0.04);
   --color-shadow-medium: rgba(15, 23, 42, 0.08);
+
+  --color-transparent: transparent;
+  --color-transparent-rgba: rgba(0, 0, 0, 0);
+  --color-warm-gray-700: rgb(87, 82, 82);
 }
+@import url("nav_bar.css");
+@import url("banner.css");
+@import url("cards.css");
 
 .banner_content {
   padding-top: 56px;

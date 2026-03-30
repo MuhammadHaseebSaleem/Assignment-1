@@ -1,21 +1,3 @@
-:root {
-  --color-white: #fff;
-  --color-transparent: transparent;
-  --color-gray-900: #111827;
-  --color-slate-800: #1e293b;
-  --color-slate-600: #475569;
-  --color-slate-500: #64748b;
-  --color-primary: #754ffe;
-  --color-slate-300: #cbd5e1;
-  --color-border-muted: #d4d8dd;
-  --color-divider: #dddfe2;
-  --color-slate-200: #e2e8f0;
-  --color-slate-100: #f1f5f9;
-  --color-gray-400: #adb1b6;
-  --color-transparent-rgba: rgba(0, 0, 0, 0);
-  --color-warm-gray-700: rgb(87, 82, 82);
-}
-
 * {
   font-family: Inter, sans-serif !important;
 }
@@ -465,14 +447,4 @@ nav input::placeholder {
 span.navbar-toggler-icon {
   width: 1.5rem;
   height: 1.5rem;
-}
-
-.nav_submain.show {
-  width: 100%;
-  height: 100% !important;
-  background: #fff;
-  padding: 16px;
-}
-.nav_submain.navbar-collapse {
-  transition: all 0.35s ease !important;
 }

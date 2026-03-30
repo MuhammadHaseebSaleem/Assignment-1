@@ -1,15 +1,3 @@
-:root {
-  --color-white: #fff;
-  --color-slate-900: #0f172a;
-  --color-slate-800: #1e293b;
-  --color-slate-700: #334155;
-  --color-slate-500: #64748b;
-  --color-primary: #754ffe;
-  --color-primary-light: #baa7fe;
-  --color-slate-300: #cbd5e1;
-  --color-amber-500: rgb(245, 158, 11);
-}
-
 .banner h1 {
   color: var(--color-white);
 

@@ -1,19 +1,3 @@
-:root {
-  --color-white: #fff;
-  --color-black: #000;
-  --color-slate-800: #1e293b;
-  --color-slate-500: #64748b;
-  --color-primary: #754ffe;
-  --color-slate-300: #cbd5e1;
-  --color-border-light: #dbe2ea;
-  --color-border-soft: #dfe4ea;
-  --color-slate-100: #f1f5f9;
-  --color-slate-50: #f8fafc;
-  --color-amber-500: rgb(245, 158, 11);
-  --color-shadow-soft: rgba(15, 23, 42, 0.04);
-  --color-shadow-medium: rgba(15, 23, 42, 0.08);
-}
-
 /* CArd section */
 .card_section {
   background-color: var(--color-slate-100);
